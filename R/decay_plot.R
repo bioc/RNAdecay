@@ -132,7 +132,7 @@ decay_plot <- function(geneID,
             x = rep(xlim[2], 4),
             y = if (any(mod.results[geneID, (length(levels(DATA$treatment)) +
                                              1):(length(levels(DATA$treatment)) * 2)] == 0)) {
-              c(max(fun_exp(xlim, unlist(
+              c(max(fun_exp(xlim[2], unlist(
                 mod.results[geneID, paste0("alpha_", gsub(" ", ".", g))]
               )) - 0.2, 0))
             } else {
