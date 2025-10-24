@@ -4,7 +4,7 @@ author: "Reed Sorenson | reed.sorenson@utah.edu | Department of Biology | Univer
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{RNAdecay}
+  %\VignetteIndexEntry{RNAdecay Vignette: Normalization, Modeling, and Visualization of RNA Decay Data}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
