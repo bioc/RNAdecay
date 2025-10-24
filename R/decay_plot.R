@@ -25,24 +25,25 @@
 #' @export
 #'
 #' @examples
-#' p<-decay_plot("Gene_BooFu",
-#'           mod.results = data.frame(alpha_WT = 0.0830195, beta_WT = 0.04998945,
-#'                                    model = 1, alpha_grp = 1, beta_grp = 1, alpha_subgroup = 1.1,
-#'                                    row.names = "Gene_BooFu"),
-#'           what = c("meanSE","alphas&betas","models"),
-#'           treatments = "WT",
-#'           colors = "black",
-#'           DATA = data.frame(geneID=rep("Gene_BooFu",15),
-#'                             treatment=rep("WT",15),
-#'                             t.decay=rep(c(0,7.5,15,30,60),3),
-#'                             rep=paste0("rep",c(rep(1,5),rep(2,5),rep(3,5))),
-#'                             value= c(0.9173587, 0.4798672, 0.3327807, 0.1990708, 0.1656554,
-#'                                      0.9407511, 0.7062988, 0.3450886, 0.3176824, 0.2749946,
-#'                                      1.1026497, 0.6156978, 0.4563346, 0.2865779, 0.1680075)),
-#'           xlim = c(0, 65),
-#'           alphaSZ = 10)
-#' print(p)
-#'
+# p<-RNAdecay::decay_plot(
+#   geneID = "GOI_id",
+#   mod.results = data.frame(alpha_WT = 0.0830195, beta_WT = 0.04998945,
+#                            model = 1, alpha_grp = 1, beta_grp = 1, alpha_subgroup = 1.1,
+#                            row.names = "GOI_id"),
+#   what = c("meanSE","alphas&betas","models"),
+#   treatments = "WT",
+#   colors = "black",
+#   DATA = data.frame(geneID=rep("GOI_id",15),
+#                     treatment=rep("WT",15),
+#                     t.decay=rep(c(0,7.5,15,30,60),3),
+#                     rep=paste0("rep",c(rep(1,5),rep(2,5),rep(3,5))),
+#                     value= c(0.9173587, 0.4798672, 0.3327807, 0.1990708, 0.1656554,
+#                              0.9407511, 0.7062988, 0.3450886, 0.3176824, 0.2749946,
+#                              1.1026497, 0.6156978, 0.4563346, 0.2865779, 0.1680075)),
+#   xlim = c(0, 65),
+#   alphaSZ = 10)
+# print(p)
+
 
 decay_plot <-
 function (geneID,
@@ -194,4 +195,3 @@ p <- p + ggplot2::scale_color_manual("", breaks = names(colors),
   ggplot2::scale_shape(guide = "none")
 return(p)
 }
-
